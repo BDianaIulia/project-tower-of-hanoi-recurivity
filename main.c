@@ -1,16 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "hanoifunc.h"
+#include "hanoi_function.h"
+#include "input.h"
 
 int main()
 {
-    int no_of_stories;
+    int no_of_stories = input();
 
-    printf( "Enter the number of the disks: \n" );
-    scanf( "%d" , &no_of_stories );
+    tower_of_hanoi( no_of_stories, "silver plate" , "bronze plate" , "golden plate" );
 
-    towerOfHanoi( no_of_stories , "silver plate" , "bronze plate" , "golden plate" );
     return 0;
 }
 
